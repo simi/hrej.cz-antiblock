@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "hrej.cz anti-abblock blocker",
+  "description": "",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_popup": "blocker.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.hrej.cz/*"],
+      "js": ["blocker.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "tabs", "http://www.hrej.cz/*"
+  ]
+}
